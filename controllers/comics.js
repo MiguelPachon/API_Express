@@ -1,7 +1,11 @@
 const comicsController = {}
+const axios = requiere("axios")
+
 
 comicsController.getComics = (req, res) => {
-    res.json({mensaje: "Hola"})
+    const POKEMON_API = ProcessingInstruction.env.POKEMON_API
+
+    axios.get(POKEMON_API + "/pokemon").then (resp => res.json(resp.data))
 }
 
 module.exports = comicsController

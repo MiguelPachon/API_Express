@@ -3,6 +3,8 @@ const comicsRouter = require("./routes/comics")
 
 const app = express()
 
+process.loadEnvFile()
+
 const port = 3000
 
 app.use(express.json())
